@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Lecture 4</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <center>
+      <h1>My first Angular app</h1>
+    </center>
+      <div ng-controller="MyFirstController">
+        <input type="text" name="" ng-model="name">
+        <br>
+        <input type="text" name="" ng-model="sayHello()">
+        <br>
+        <br>
+        <br>
+
+        Inside text field 1: {{name}}
+        <br>
+        <br>
+        Inside text field 2: {{sayHello()}}
+       </div>
+  </body>
+</html>
