@@ -22,7 +22,7 @@ function LaunchCheckController($scope) {
                 }
             }
 
-            if (count <=3) {
+            if (count <=3 && count>=1) {
                 $scope.output="Enjoy!";
             }
             else {
