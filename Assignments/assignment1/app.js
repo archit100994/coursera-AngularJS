@@ -9,6 +9,8 @@ LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
     $scope.items="";
     $scope.output="";
+    $scope.messageType="";
+    $scope.bordCol="";
     $scope.check = function () {
         if($scope.items)
         {
@@ -24,32 +26,24 @@ function LunchCheckController($scope) {
 
             if (count <=3 && count>=1) {
                 $scope.output="Enjoy!";
-                $('#message-type').removeClass('message-failed');
-                $('#message-type').addClass('message-success');
-                $('#lunch-menu').removeClass('lunch-failed');
-                $('#lunch-menu').addClass('lunch-success');
+                $scope.messageType="success";
+                $scope.bordCol="green";
             }
             else if (count>3) {
                 $scope.output="Too much!";
-                $('#message-type').removeClass('message-success');
-                $('#message-type').addClass('message-failed');
-                $('#lunch-menu').removeClass('lunch-success');
-                $('#lunch-menu').addClass('lunch-failed');
+                $scope.messageType="danger";
+                $scope.bordCol="red";
             }
             else if (count<=0) {
                 $scope.output="Please enter data first";
-                $('#message-type').removeClass('message-success');
-                $('#message-type').addClass('message-failed');
-                $('#lunch-menu').removeClass('lunch-success');
-                $('#lunch-menu').addClass('lunch-failed');
+                $scope.messageType="danger";
+                $scope.bordCol="red";
             }
         }
         else {
             $scope.output="Please enter data first";
-            $('#message-type').removeClass('message-success');
-            $('#message-type').addClass('message-failed');
-            $('#lunch-menu').removeClass('lunch-success');
-            $('#lunch-menu').addClass('lunch-failed');
+            $scope.messageType="danger";
+            $scope.bordCol="red";
         }
     };
 }
