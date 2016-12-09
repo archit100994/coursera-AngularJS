@@ -14,10 +14,16 @@
             <br>
             Updated: {{sayLovesMessage()}}
             <br><br><br>
+
             {{ "Archit don't want to go to Mumbai" | loves }}
             <br><br><br>
 
             Truth: {{sayLovesMessage() | truth : 'Archit' : 'No one'}}
+
+            <br>
+
+            BIG TRUTH: {{sayLovesMessage() | truth : 'Archit' : 'No one' | uppercase}}
+
             <div>
                 <button ng-click="showPipes()">Show Pipes</button>
                 <br>
