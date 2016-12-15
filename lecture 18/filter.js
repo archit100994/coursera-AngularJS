@@ -6,5 +6,20 @@ function above5filter (value) {
 }
 
 var filteredNumberArray = numberArray.filter(above5filter);
-
 console.log("filtered Number array: ", filteredNumberArray);
+
+var shoppingList= [
+    "Milk", "donuts", "Cookies", "Choclate", "peanut butter",
+    "pepto bismol", "pepto bismol (Choclate flavor)",
+    "pepto bismol (Cookie flavor)"
+];
+console.log("shoppingList: ", shoppingList );
+
+var searchValue = "bismol";
+
+function  containsFilter(value) {
+    return value.indexOf(searchValue) != -1;
+}
+
+var searchedShoppingList = shoppingList.filter(containsFilter);
+console.log(searchedShoppingList);
